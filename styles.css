@@ -57,6 +57,92 @@ body {
 
 /*Header/Hero Section*/
 
+
+/* Header/Hero Section */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 65px;
+
+    padding: 0.5rem 1.5rem;
+
+    background: rgba(10, 15, 30, 0.85);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    display: block;
+
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+/* The big mascot belongs in the hero, not the header */
+
+.hero_container {
+    position: relative; /*relative to bar*/
+
+    min-height: 70vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 1rem;
+
+    text-align: center;
+}
+
+.hero_content {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero_mascot {
+    display: block;
+
+    width: min(55vw, 400px);
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 1rem;
+}
+
+
+
 .hero_container {
     position: relative; /*relative to bar*/
 
@@ -90,7 +176,7 @@ body {
 
 .hero_content p {
     margin: 1rem auto 0;
-
+    padding-block:top 20px;
     max-width: 600px;
 
     font-size: clamp(1rem, 4vw, 1.4rem);
@@ -105,6 +191,8 @@ body {
 .scroll_hint {
     position: absolute; /*absolute so its position doesnt change*/
     bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     display: flex;
     flex-direction: column;
